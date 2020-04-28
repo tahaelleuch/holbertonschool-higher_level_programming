@@ -5,5 +5,5 @@ def print_last_digit(number):
     else:
         pos_number = number
     a = pos_number % 10
-    print(a, end = '')
+    print({:d}".format(a), end = '')
     return (a)

@@ -6,9 +6,10 @@ if number < 0:
 else:
     pos_number = number
 a = pos_number % 10
+print('Last digit of {} is {} '.format(number, a), end='')
 if a > 5:
-    print("Last digit of {} is {} and is greater than 5".format(number, a))
+    print('and is greater than 5')
 elif a == 0:
-    print("Last digit of {} is {} and is 0".format(number, a))
+    print('and is 0')
 else:
-    print("Last digit of {} is {} and is less than 6 and not 0".format(number, a))
+    print('and is less than 6 and not 0')

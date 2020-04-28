@@ -4,4 +4,4 @@ for i in range(10):
         if j == 9 and i == 8:
             print("{:d}{:d}".format(i, j))
         else:
-            print("{:d}{:d}".format(i, j), end = ', ')
+            print("{:d}{:d}".format(i, j), end=', ')

@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
+a = abs(number) % 10
 if number < 0:
-    pos_number = number * -1
-else:
-    pos_number = number
-a = pos_number % 10
+    a = a * -1
 print('Last digit of {} is {} '.format(number, a), end='')
 if a > 5:
     print('and is greater than 5')

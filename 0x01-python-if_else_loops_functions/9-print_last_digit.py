@@ -1,9 +1,4 @@
 #!/usr/bin/python
 def print_last_digit(number):
-    if number < 0:
-        pos_number = number * -1
-    else:
-        pos_number = number
-    a = pos_number % 10
-    print({:d}".format(a), end = '')
-    return (a)
+    print("{:d}".format(abs(number) % 10), end='')
+    return (abs(number) % 10)

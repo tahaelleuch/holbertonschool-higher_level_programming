@@ -44,3 +44,9 @@ boolean input:
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+str input:
+    >>> add_integer(3, "2")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer

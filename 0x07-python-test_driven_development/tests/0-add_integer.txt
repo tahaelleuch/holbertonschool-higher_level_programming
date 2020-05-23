@@ -1,0 +1,46 @@
+Using ``add_integer``
+------------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Basic usage:
+    >>> add_integer(2, 2)
+    4
+
+Float output
+    >>> add_integer(30.2, -2)
+    28
+
+Entring one parametres:
+    >>> add_integer(12)
+    110
+
+None input:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Float input:
+    >>> add_integer(2, "Holberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+no input:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+input NaN float:
+    >>> add_integer(float('NaN'), 2)
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+boolean input:
+    >>> add_integer(True, 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer

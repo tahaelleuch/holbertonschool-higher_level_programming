@@ -90,4 +90,3 @@ class Rectangle:
             The representation
         """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-

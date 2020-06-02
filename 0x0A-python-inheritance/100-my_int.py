@@ -9,8 +9,9 @@ class MyInt(int):
         if type(value) is not int:
             raise TypeError("must be an integer")
         self.__value = value
+
     def __new__(cls, *args, **kwargs):
-        return  super(MyInt, cls).__new__(cls, *args, **kwargs)
+        return super(MyInt, cls).__new__(cls, *args, **kwargs)
 
     def __eq__(self, other):
         """chnaging equality"""

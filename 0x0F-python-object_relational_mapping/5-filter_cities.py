@@ -16,7 +16,7 @@ if __name__ == "__main__":
     WHERE states.name = %s\
     ORDER BY cities.id", (argv[4],))
     rows = cur.fetchall()
-    list = [] 
+    list = []
     for row in rows:
         list.append(row[0])
     print(', '.join(list))

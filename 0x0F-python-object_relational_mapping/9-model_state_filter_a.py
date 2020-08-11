@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  lists all State objects that contain 
+"""lists all State objects that contain
 the letter a from the database hbtn_0e_6_usa"""
 
 from sqlalchemy.orm import sessionmaker
@@ -14,7 +14,8 @@ if __name__ == "__main__":
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-    state_a = session.query(State).filter(State.name.like('%a%')).order_by(State.id)
+    state_a = session.query(State).filter(State.name.like('%\
+    a%')).order_by(State.id)
     for state in state_a:
         print("{}: {}".format(state.id, state.name))
     session.close()

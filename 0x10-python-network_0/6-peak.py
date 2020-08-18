@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """find the peak element on a list"""
+
+
 def find_peak(list_of_integers):
     """find_peak func
     Args:

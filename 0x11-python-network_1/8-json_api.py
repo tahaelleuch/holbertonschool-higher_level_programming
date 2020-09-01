@@ -16,6 +16,7 @@ if __name__ == '__main__':
         if not req.json():
             print("No result")
         else:
-            print("[{}] {}".format(req.json().get("id"), req.json().get("name")))
+            print("[{}] {}".format(req.json().get("id"), req.json()
+                  .get("name")))
     except ValueError:
         print("Not a valid JSON")

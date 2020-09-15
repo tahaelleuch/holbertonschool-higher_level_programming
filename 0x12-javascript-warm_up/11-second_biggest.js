@@ -1,12 +1,18 @@
 #!/usr/bin/node
 /* second biggest */
-let args = process.argv.slice(2);
-let secnd_big = 0;
+const args = process.argv.slice(2);
+let secndbig = 0;
 let biggest = 0;
 for (const i in args) {
+  if (isNaN(args[i])) {
+    continue;
+  }
   if (parseInt(args[i]) > biggest) {
-    secnd_big = biggest;
+    secndbig = biggest;
     biggest = parseInt(args[i]);
   }
+  if (biggest > parseInt(args[i]) && parseInt(args[i]) > secndbig) {
+    secndbig = parseInt(args[i]);
+  }
 }
-console.log(secnd_big);
+console.log(secndbig);

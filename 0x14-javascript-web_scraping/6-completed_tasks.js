@@ -14,8 +14,9 @@ request(process.argv[2], function (error, response, body) {
     if (Mybody[j].completed === true) {
       if (dict[Mybody[j].userId] === undefined) {
         dict[Mybody[j].userId] = 1;
-      }
+      } else {
       dict[Mybody[j].userId]++;
+      }
     }
   }
   console.log(dict);

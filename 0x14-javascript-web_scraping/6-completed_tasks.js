@@ -7,12 +7,12 @@ request(process.argv[2], function (error, response, body) {
   }
   const Mybody = JSON.parse(body);
   const dict = {};
-  for (let i = 1; i < 11; i++) {
-    dict[i] = 0;
-    for (const j in Mybody) {
-      if (Mybody[j].userId === i && Mybody[j].completed === true) {
-        dict[i]++;
-      }
+  for (let i in Mybody) {
+    dict[Mybody[i].userId] = 0;
+  }
+  for (const j in Mybody) {
+    if (Mybody[j].completed === true) {
+      dict[Mybody[j].userId]++;
     }
   }
   console.log(dict);
